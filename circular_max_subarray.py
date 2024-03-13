@@ -27,7 +27,7 @@ for i in range(len(nums)):
 max_case1 = act_sum - min1
 
     # print(act_sum)
-if (max1<0):
+if (act_sum==min1):
     print(max1)
 else:
     print(max(max_case1,max1))
