@@ -1,19 +1,15 @@
 #eliminating permutations eliminating repeated values
-def jump(n,temp):
+def jump(n,arr,idx,temp):
     if(n==0):
-        
         print(temp)
         return
-    # if(n<0):
-    #     return
-    if(n-arr[0]>=0):
-        jump(n-arr[0],temp+'1')
-    if(n-arr[1]>=0):
-        jump(n-arr[1],temp+'2')
-    if(n-arr[2]>=0):
-        jump(n-arr[2],temp+'3')
+    if(n<0):
+        return
+    for i in range(idx,len(arr)):
+        jump(n-arr[i],arr,i,temp+str(arr[i]))
+    
 
 arr = [1,2,3]       
-jump(3,"",arr)
+jump(4,arr,0,"")
 
 #recirsion ke andar loop hint
