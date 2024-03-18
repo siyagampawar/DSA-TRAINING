@@ -28,3 +28,5 @@ if(flag):
     print("String is palindrome")
 else:
     print("String is not Palindrome")
+    
+#starting ending palindrome pointers 
